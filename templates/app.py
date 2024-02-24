@@ -30,7 +30,7 @@ def perform_sqldb_operation(db_operation, op, table_name, values=None, col1=None
         if db_operation.lower() == "sql":
             conn = connection.connect(host="localhost", user="root", passwd="mysql123", database='razer', use_pure=True)
             cursor = conn.cursor()
-            query, values = sql_table_queries(op, table_name, values, col1, col2, val1, val)
+            query, values = sql_table_queries(op, table_name, values, col1, col2, val1, val2)
             if op.lower() == 'insertion':
                 if len(values) > 1:
                     cursor.executemany(query, values)
