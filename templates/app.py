@@ -48,7 +48,7 @@ def perform_sqldb_operation(db_operation, op, table_name, values=None, col1=None
 
 def perform_MongoDB_operation(op, dbname, collname, values):
     try:
-        client = pymongo.MongoClient("mongodb://localhost:27017")
+        client = pymongo.MongoClient("mongodb+srv://chiragpattanaik03:mysql123@atlascluster.qkrcncj.mongodb.net/?retryWrites=true&w=majority")
         db = client[dbname]  # created a database in the mongodb
         if op == "collectioncreation":
             db[collname]  # created a collection in the mongoDB database
